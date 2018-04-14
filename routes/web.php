@@ -15,6 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+Route::get('profile/{userid}', 'ProfileController@index')->name('profile');
+Route::get('/settings','SettingsController@index')->name('settings');
+Route::get('/contests','ContestsController@index')->name('contests');
+Route::post('/settings','SettingsController@store')->name('settings.store');
+Route::get('/contest/{contestName}','ExamController@index')->name('exam');
+
+
 Auth::routes();
+
 
 Route::get('/home', 'HomeController@index')->name('home');

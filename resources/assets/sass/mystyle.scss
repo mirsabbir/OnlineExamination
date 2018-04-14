@@ -3,8 +3,45 @@
 
 
 
- 
+$navbar-height: 4rem;
+$footer-background-color: #292d35;
+$tabs-border-bottom-width: 2px;
+$gap: 60px;
 
+.success{
+    color:hsl(141, 71%, 48%);
+}
+.danger{
+    color: hsl(348, 100%, 61%);
+}
+.primary{
+    color: hsl(171, 100%, 41%);
+}
 
+.info{
+    color: hsl(204, 86%, 53%);
+}
+
+.footer{
+    color: white;
+    font-family: raleway;
+    height: 300px;
+}
+
+.footer i{
+    color: #234eac;
+}
+
+.footer i:last-child{
+    color: red;
+}
+
+.formbody{
+    padding: 40px;
+    background-color: whitesmoke;
+    margin-top: 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 9px 0.1px gray;
+}
 
 @import "node_modules/bulma/bulma";

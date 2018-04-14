@@ -21,56 +21,65 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                            <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
+    <nav class="navbar is-primary has-shadow" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="{{config('app.url')}}">
+            <img src="{{asset('logos/oelogo.png')}}" alt="Online Examination" width="270" height="28">
+            </a>
+            <div class="navbar-burger" data-target="navMenu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-        </nav>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-end">
+            @if(!Auth::check())
+                <a class="navbar-item" href="{{ route('login') }}">{{ __('Login') }}</a>
+                <a class="navbar-item" href="{{ route('register') }}">{{ __('Register') }}</a>
+            @else
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link"></a>
+                    <div class="navbar-dropdown is-right">
+                        <a href="/profile/{{Auth::user()->userid}}" class="navbar-item">
+                           <i class="fa fa-user"> </i> &nbsp  Profile
+                        </a>
+                        <a class="navbar-item">
+                        <i class="fa fa-sign-out"> </i> &nbsp 
+                        <form method="post" action="/logout">
+                            @csrf
+                           <input type="submit" value="Log out"style="background:none;border:none;cursor:pointer;display:block;"> 
+                        </form>
+                        </a>
+                    </div>
+                </div>
+            @endif
+            </div>
+        </div>
+    </nav>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+
+    @yield('content')
+
+
+
+<!--footer -->
+
+<footer class="footer">
+    <div class="container">
+    <div class="columns">
+    <i class="column fa fa-2x fa-facebook-square"> </i>
+    <div class=" columncontent has-text-centered">
+        Online Examination<br/> with  <i class="fa fa-heart"></i> by sabbir
     </div>
+    </div>
+  </div>
+</footer>
+
 </body>
+
+<script>
+    
+</script>
+
 </html>

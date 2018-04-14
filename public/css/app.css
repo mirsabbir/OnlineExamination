@@ -17270,6 +17270,45 @@ label.panel-block:hover {
   background: rgba(255, 56, 96, 0.05);
 }
 
+.success {
+  color: #23d160;
+}
+
+.danger {
+  color: #ff3860;
+}
+
+.primary {
+  color: #00d1b2;
+}
+
+.info {
+  color: #209cee;
+}
+
+.footer {
+  color: white;
+  font-family: raleway;
+  height: 300px;
+}
+
+.footer i {
+  color: #234eac;
+}
+
+.footer i:last-child {
+  color: red;
+}
+
+.formbody {
+  padding: 40px;
+  background-color: whitesmoke;
+  margin-top: 60px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 9px 0.1px gray;
+          box-shadow: 0 0 9px 0.1px gray;
+}
+
 /*! bulma.io v0.6.2 | MIT License | github.com/jgthms/bulma */
 
 @keyframes spinAround {
@@ -19956,13 +19995,13 @@ a.box:active {
 
 @media screen and (min-width: 1024px) {
   .container {
-    max-width: 960px;
-    width: 960px;
+    max-width: 904px;
+    width: 904px;
   }
 
   .container.is-fluid {
-    margin-left: 32px;
-    margin-right: 32px;
+    margin-left: 60px;
+    margin-right: 60px;
     max-width: none;
     width: auto;
   }
@@ -19970,29 +20009,29 @@ a.box:active {
 
 @media screen and (max-width: 1215px) {
   .container.is-widescreen {
-    max-width: 1152px;
+    max-width: 1096px;
     width: auto;
   }
 }
 
 @media screen and (max-width: 1407px) {
   .container.is-fullhd {
-    max-width: 1344px;
+    max-width: 1288px;
     width: auto;
   }
 }
 
 @media screen and (min-width: 1216px) {
   .container {
-    max-width: 1152px;
-    width: 1152px;
+    max-width: 1096px;
+    width: 1096px;
   }
 }
 
 @media screen and (min-width: 1408px) {
   .container {
-    max-width: 1344px;
-    width: 1344px;
+    max-width: 1288px;
+    width: 1288px;
   }
 }
 
@@ -24131,7 +24170,7 @@ a.dropdown-item.is-active,
 
 .navbar {
   background-color: white;
-  min-height: 3.25rem;
+  min-height: 4rem;
   position: relative;
 }
 
@@ -24732,7 +24771,7 @@ a.dropdown-item.is-active,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 3.25rem;
+  min-height: 4rem;
   width: 100%;
 }
 
@@ -24763,11 +24802,11 @@ a.dropdown-item.is-active,
 }
 
 html.has-navbar-fixed-top {
-  padding-top: 3.25rem;
+  padding-top: 4rem;
 }
 
 html.has-navbar-fixed-bottom {
-  padding-bottom: 3.25rem;
+  padding-bottom: 4rem;
 }
 
 .navbar-brand,
@@ -24780,7 +24819,7 @@ html.has-navbar-fixed-bottom {
   display: flex;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  min-height: 3.25rem;
+  min-height: 4rem;
 }
 
 .navbar-tabs {
@@ -24793,9 +24832,9 @@ html.has-navbar-fixed-bottom {
 .navbar-burger {
   cursor: pointer;
   display: block;
-  height: 3.25rem;
+  height: 4rem;
   position: relative;
-  width: 3.25rem;
+  width: 4rem;
   margin-left: auto;
 }
 
@@ -24895,7 +24934,7 @@ a.navbar-link.is-active {
 
 .navbar-item.is-tab {
   border-bottom: 1px solid transparent;
-  min-height: 3.25rem;
+  min-height: 4rem;
   padding-bottom: calc(0.5rem - 1px);
 }
 
@@ -24994,16 +25033,16 @@ a.navbar-link.is-active {
   .navbar.is-fixed-top .navbar-menu,
   .navbar.is-fixed-top-touch .navbar-menu {
     -webkit-overflow-scrolling: touch;
-    max-height: calc(100vh - 3.25rem);
+    max-height: calc(100vh - 4rem);
     overflow: auto;
   }
 
   html.has-navbar-fixed-top-touch {
-    padding-top: 3.25rem;
+    padding-top: 4rem;
   }
 
   html.has-navbar-fixed-bottom-touch {
-    padding-bottom: 3.25rem;
+    padding-bottom: 4rem;
   }
 }
 
@@ -25021,7 +25060,7 @@ a.navbar-link.is-active {
   }
 
   .navbar {
-    min-height: 3.25rem;
+    min-height: 4rem;
   }
 
   .navbar.is-transparent a.navbar-item:hover,
@@ -25230,11 +25269,11 @@ a.navbar-link.is-active {
   }
 
   html.has-navbar-fixed-top-desktop {
-    padding-top: 3.25rem;
+    padding-top: 4rem;
   }
 
   html.has-navbar-fixed-bottom-desktop {
-    padding-bottom: 3.25rem;
+    padding-bottom: 4rem;
   }
 
   a.navbar-item.is-active,
@@ -25690,7 +25729,7 @@ label.panel-block:hover {
           align-items: center;
   border-bottom-color: #dbdbdb;
   border-bottom-style: solid;
-  border-bottom-width: 1px;
+  border-bottom-width: 2px;
   color: #4a4a4a;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -25698,7 +25737,7 @@ label.panel-block:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: -1px;
+  margin-bottom: -2px;
   padding: 0.5em 1em;
   vertical-align: top;
 }
@@ -25723,7 +25762,7 @@ label.panel-block:hover {
           align-items: center;
   border-bottom-color: #dbdbdb;
   border-bottom-style: solid;
-  border-bottom-width: 1px;
+  border-bottom-width: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28904,7 +28943,7 @@ label.panel-block:hover {
 }
 
 .footer {
-  background-color: whitesmoke;
+  background-color: #292d35;
   padding: 3rem 1.5rem 6rem;
 }
 
